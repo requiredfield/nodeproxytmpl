@@ -1,0 +1,10 @@
+var httpProxy = require('http-proxy');
+var proxy = httpProxy.createServer({
+  target: '%s',
+  changeOrigin: true,
+  xfwd: true
+});
+proxy.on('error', function (e) { console.error(e); });
+var port = process.env.port || 8000;
+console.info('listening on port', port);
+proxy.listen(port);
