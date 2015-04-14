@@ -1,8 +1,11 @@
-var httpProxy = require('http-proxy');
+var httpProxy = require('http-proxy'),
+    KeepAliveAgent = require('agentkeepalive');
+
 var proxy = httpProxy.createServer({
-  target: '%s',
+  target: '$origin',
   changeOrigin: true,
-  xfwd: true
+  xfwd: true,
+  agent: new KeepAliveAgent()
 });
 proxy.on('error', function (e) { console.error(e); });
 var port = process.env.port || 8000;

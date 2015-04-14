@@ -3,6 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "dependencies": {
-    "http-proxy": "^1.8.1"
+    "http-proxy": "^1.9.0",
+    "agentkeepalive": "^2.0.0"
   }
 }

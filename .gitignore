@@ -1,3 +1,6 @@
+node_modules
+server.js
+
 ######################################################################
 # https://github.com/github/gitignore/blob/master/Global/OSX.gitignore
 ######################################################################
